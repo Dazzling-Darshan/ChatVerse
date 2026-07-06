@@ -9,7 +9,7 @@ import path from "path";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const FRONTEND_URL = process.send.FRONTEND_URL;
+const FRONTEND_URL = process.env.FRONTEND_URL;
 
 const pubDir = path.join(process.cwd(), "public");
 
