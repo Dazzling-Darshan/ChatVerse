@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "build": "rimraf dist && copyfiles -u 1 src/**/* dist",
-    "start": "node src/index.js"
+    "build": "rimraf dist && copyfiles -u 1 src/**/* dist && cp package.json dist/",
+    "start": "node dist/index.js"
   },
   "keywords": [],
   "author": "",
