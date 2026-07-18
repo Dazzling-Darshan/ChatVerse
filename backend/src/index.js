@@ -7,6 +7,7 @@ import fs from "fs";
 import path from "path";
 import job from "./lib/cron.js";
 import clerkWebhook from "./webhooks/clerk.webhook.js";
+import authRoutes from "./routes/auth.routes.js";
 
 const app = express();
 
@@ -48,6 +49,8 @@ app.get("/health", (req, res) => {
   res.status(200).json({ ok: true });
 });
 
+
+app.use("/api/auth", authRoutes )
 /* ============================
    Static Frontend
 ============================ */
